@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!-- pipeline.png の元。描き直すときは README の「サンプルの図を描き直す」を見る -->
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1600px; height: 600px; overflow: hidden; }
+  body { background: #fff; font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif; color: #1d2430; }
+  .row { position: absolute; left: 40px; top: 120px; display: flex; gap: 60px; align-items: center; }
+  .b { width: 310px; height: 350px; border: 4px solid #1d2430; border-radius: 16px; padding: 26px 22px; position: relative; background: #f7f7f2; }
+  .b h2 { font-size: 46px; font-weight: 900; }
+  .b p { font-size: 28px; margin-top: 16px; line-height: 1.4; color: #374151; }
+  .b .tool { position: absolute; left: 22px; bottom: 22px; font-size: 26px; font-weight: 800; color: #fff; background: #2f6f8f; padding: 4px 12px; border-radius: 6px; }
+  .arrow { position: absolute; top: 270px; font-size: 54px; font-weight: 900; color: #9ca3af; }
+  h1 { position: absolute; left: 40px; top: 30px; font-size: 44px; font-weight: 900; }
+</style>
+</head>
+<body>
+  <h1>台本 1 つから、コマンド 1 回で動画まで</h1>
+  <div class="row">
+    <div class="b"><h2>台本</h2><p>場面ごとに<br>見せる画像と<br>台詞を書く</p><span class="tool">YAML</span></div>
+    <div class="b"><h2>音声</h2><p>台詞を 1 本ずつ<br>声にする</p><span class="tool">VOICEVOX</span></div>
+    <div class="b"><h2>画</h2><p>画像・赤枠・<br>字幕を 1 枚に<br>描く</p><span class="tool">HTML + Chrome</span></div>
+    <div class="b"><h2>動画</h2><p>声と画を<br>つないで<br>字幕も付ける</p><span class="tool">ffmpeg → mp4</span></div>
+  </div>
+  <span class="arrow" style="left:356px">→</span>
+  <span class="arrow" style="left:726px">→</span>
+  <span class="arrow" style="left:1096px">→</span>
+</body>
+</html>

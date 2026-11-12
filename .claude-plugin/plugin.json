@@ -1,0 +1,10 @@
+{
+  "name": "explainer-video",
+  "version": "0.2.0",
+  "description": "資料やナレッジのページから、ずんだもんと四国めたんの掛け合い解説動画 (VOICEVOX) の台本を書き、レビューして mp4 まで作る skill",
+  "author": { "name": "iineineno03k" },
+  "homepage": "https://github.com/iineineno03k/explainer-video",
+  "repository": "https://github.com/iineineno03k/explainer-video",
+  "license": "MIT",
+  "keywords": ["video", "voicevox", "zundamon", "explainer", "onboarding"]
+}

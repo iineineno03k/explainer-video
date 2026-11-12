@@ -1,0 +1,8 @@
+# VOICEVOX エンジン (CPU 版)。Mac (Apple Silicon / Intel) と Windows の Docker Desktop で同じように動く。
+# 起動: docker compose up -d   止める: docker compose down
+services:
+  voicevox:
+    image: voicevox/voicevox_engine:cpu-0.26.1
+    ports:
+      - "127.0.0.1:50021:50021"
+    restart: unless-stopped

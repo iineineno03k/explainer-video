@@ -1,0 +1,95 @@
+# サンプル: この仕組みそのものを説明する 1〜2 分の動画
+# 作り方: explainer build samples/how-it-works/script.yaml
+# 見本にしている決まり: 最初に「分かること」を問いで見せる → 場面は問いに 1 つずつ答える
+#                      → 図は見方を言ってから枠で順に追う → 最後に問いへの答えを並べ直す
+name: how-it-works
+title: 資料を、聞いて分かる動画にする
+subtitle: ずんだもんと四国めたんの掛け合い解説の作り方
+readings: readings.yaml
+output: out/how-it-works.mp4
+
+scenes:
+  - title: この動画で分かること
+    card:
+      title: 見終わると、この 3 つに答えられる
+      reveal: true
+      points:
+        - なんのための仕組み？
+        - どうやって動画になる？
+        - 見る人が迷わない工夫は？
+    lines:
+      - zundamon: 資料を読むの、正直しんどいのだ。
+        upto: 0
+      - metan: そんな資料を、2 人の掛け合いの動画にする仕組みがあるの。
+        upto: 1
+      - metan: どうやって作るかと、見る人が迷わない工夫も話すわ。
+        upto: 3
+
+  - title: なんのための仕組み？
+    card:
+      title: 資料を、2 人の掛け合いの動画にする
+      sub: 読むのがしんどい資料も、聞けば頭に入る
+    lines:
+      - zundamon: そもそも、なんのための仕組みなのだ？
+      - metan: 読むのがしんどい資料も、聞けば頭に入るようにするためよ。
+      - zundamon: 2 人って、ボクとめたんのことなのだ？
+      - metan: そう。あなたが分からないことを聞いて、わたしが答える役よ。
+      - metan: 見ている人の疑問を、あなたが先に言ってくれるの。
+
+  - title: どうやって動画になる？
+    image: images/pipeline.png
+    zoom: {x: 0, y: 0, w: 1600, h: 500}
+    lines:
+      - zundamon: それで、資料はどうやって動画になるのだ？
+      - metan: 4 つの作業を順に通すの。図は左から右へ、四角が 1 つの作業よ。
+        dim: false
+      - metan: まず台本。資料を読んで、場面ごとに見せる画像と台詞を YAML に書くの。
+        boxes: [{x: 40, y: 120, w: 310, h: 350, label: ① 台本}]
+      - metan: 次に VOICEVOX が、台詞を 1 本ずつ声にする。
+        boxes: [{x: 410, y: 120, w: 310, h: 350, label: ② 音声}]
+      - metan: 画は HTML で組んで、Chrome で 1 枚ずつ画像に書き出すわ。
+        boxes: [{x: 780, y: 120, w: 310, h: 350, label: ③ 画}]
+      - metan: 最後に ffmpeg が、声と画をつないで mp4 にするの。
+        boxes: [{x: 1150, y: 120, w: 310, h: 350, label: ④ 動画}]
+      - zundamon: コマンドは何回打つのだ？
+      - metan: 1 回よ。explainer build に台本を渡すだけ。
+        point: explainer build 台本.yaml
+
+  - title: 見る人が迷わない工夫は？
+    card:
+      title: 見る人の頭を軽くする 4 つの決まり
+      reveal: true
+      points:
+        - 分かることを、最初に問いで見せる
+        - 図は、見方を先に言う
+        - 見る所を枠で囲み、外は暗くする
+        - 1 つの場面で言うことは 1 つ
+    lines:
+      - zundamon: 見ていて迷わない工夫はあるのだ？
+        upto: 0
+      - metan: 4 つあるわ。まず、この動画の最初みたいに、分かることを問いで見せる。
+        upto: 1
+      - metan: 図を出したら、中身より先に見方を言うの。
+        upto: 2
+      - metan: 話している所は枠で囲んで、外は暗くするわ。
+        upto: 3
+      - metan: それから、1 つの場面で言うことは 1 つにしている。
+        upto: 4
+
+  - title: 分かったこと
+    card:
+      title: 3 つの問いの答え
+      reveal: true
+      points:
+        - 何のため：資料を、聞いて分かる掛け合いにする
+        - どうやって：台本を書けば、音声・画・動画はコマンド 1 回で
+        - 迷わない工夫：問いで始め、見方を言い、見る所を囲み、1 場面 1 つ
+    lines:
+      - zundamon: 最初の 3 つの問い、答えをまとめてほしいのだ。
+        upto: 0
+      - metan: 何のためかは、資料を、聞けば分かる掛け合いの動画にするため。
+        upto: 1
+      - metan: 作り方は、台本を書いて、コマンドを 1 回打つだけ。
+        upto: 2
+      - metan: 迷わない工夫は、さっきの 4 つの決まりよ。
+        upto: 3

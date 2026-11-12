@@ -1,0 +1,14 @@
+{
+  "name": "explainer-video",
+  "description": "資料から掛け合いの解説動画 (VOICEVOX) を作る skill",
+  "owner": {
+    "name": "iineineno03k"
+  },
+  "plugins": [
+    {
+      "name": "explainer-video",
+      "source": "./",
+      "description": "資料やナレッジのページから、ずんだもんと四国めたんの掛け合い解説動画を作る skill (explainer-script / understanding-video)"
+    }
+  ]
+}
